@@ -99,7 +99,7 @@ class GameManager extends PluginBase {
 			}
 			Utils::addArena(new Config($folder.$file, Config::YAML, []), str_replace(".yml", "", $file), $directory."Maps/");
 		}
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new BattleTask($this), 20);
+		$this->getScheduler()->scheduleRepeatingTask(new BattleTask($this), 20);
 		$this->getLogger()->info("El plugin se ha cargado");
 	}
 
